@@ -1,0 +1,17 @@
+# Umoja Network
+> Affordable uncapped 5G home internet for South African communities.
+
+Umoja bridges the digital divide by delivering fast, unlimited 5G home internet to underserved communities across South Africa. Customers can check coverage, apply online, and get connected with a single router — no contracts, no throttling.
+
+## Key pages
+- / — home page and service overview
+- /coverage — interactive coverage checker (enter your address to see if 5G is available)
+- /application — primary signup flow for new customers
+- /online — online product landing page
+
+## Business context
+- Service area: South Africa (currently expanding)
+- Product: Uncapped 5G home internet via fixed-wireless router
+- Target audience: Households and small businesses in underserved South African communities
+- Referral programme: Customers can refer others and earn rewards
+- Reseller programme: Community resellers can sign up partners using personalised links

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Tired of slow internet and data caps? Get Umoja's affordable 5G Homespot with unlimited data for seamless streaming, gaming, and browsing."
+    />
+    <meta name="author" content="Umoja" />
+    <title>Umoja - Unlimited 5G Home Internet</title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="https://portal.umoja.network/custom_icons/1b42d87b8a41687683505729c1d20873/apple-icon-57x57.png" />
+
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Animate.css for subtle animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      /* Additional professional styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+      .navbar { padding: 1rem 0; }
+      .navbar-brand img { border-radius: 8px; }
+      .nav-link { transition: color 0.2s ease-in-out; }
+      .nav-link:hover { color: #EC008C; }
+      .display-5 { font-size: 2.8rem; font-weight: 700; }
+      .btn-primary {
+        background: linear-gradient(90deg, #EC008C, #c40073);
+        border: none;
+        transition: transform 0.2s ease-in-out;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+      }
+      .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+      footer { margin-top: 4rem; }
+      .benefit-icon { font-size: 2.5rem; color: #EC008C; }
+      .testimonial-card { border-left: 5px solid #EC008C; }
+
+      /* Custom styles for visible social icons */
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px; /* Space between icons */
+        align-items: center;
+      }
+      .social-icons li a {
+        color: #EC008C; /* Icon color */
+        font-size: 1.8rem; /* Icon size */
+        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .social-icons li a:hover {
+        color: #c40073; /* Hover color */
+        transform: scale(1.1);
+      }
+      .social-icons li a span {
+        font-size: 1rem;
+        margin-left: 8px;
+        color: #212529; /* Text color */
+      }
+      .social-section {
+        background-color: #f1f2f3;
+        padding: 2rem 0;
+        border-top: 1px solid #e9ecef;
+        text-align: center;
+      }
+
+      /* Style for the "Launch Special" badge */
+      .product-image-container {
+        position: relative; /* Essential for positioning the badge */
+      }
+      .launch-special-badge {
+        position: absolute;
+        top: 15px; /* Adjust as needed for padding from the top */
+        left: 15px; /* Adjust as needed for padding from the left */
+        background-color: #EC008C; /* Umoja's primary color */
+        color: white;
+        border-radius: 50%; /* Makes it a circle */
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9rem; /* Adjust font size */
+        text-align: center;
+        line-height: 1.2; /* For multi-line text */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+        z-index: 10; /* Ensure it's above the image */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container px-4 px-lg-5">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#!">
+          <img
+            src="assets/logo.avif"
+            alt="Umoja Logo"
+            width="150"
+            height="40"
+            class="me-2"
+          />
+        </a>
+
+        <!-- Navbar toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links (right side) -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" aria-current="page" href="#!"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#social-section">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="https://portal.umoja.network/">Sign In</a>
+            </li>
+
+
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product section-->
+    <section class="py-5 mt-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+          <!-- Product Image -->
+          <div class="col-md-6">
+            <div class="product-image-container">
+              <img
+                class="card-img-top mb-5 mb-md-0 rounded shadow-lg"
+                src="assets/product.avif"
+                alt="Umoja Homespot 5G Router in a modern living room"
+              />
+              <div class="launch-special-badge">
+                Launch<br>Special
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="col-md-6">
+
+            <h1 class="display-5 fw-bold mb-3">Tired of Buffering? Your Unlimited 5G Internet is Here.</h1>
+
+            <p class="lead mb-4">
+              Stop waiting and start streaming. Get the speed you need for the whole family with our <strong>20Mbps 5G Unlimited</strong> plan. Finally, internet that just works — no data caps, no surprise fees. Plus, stay connected during power outages thanks to our router's <strong>backup battery</strong>!
+            </p>
+
+            <div class="card bg-light border-0 p-4 mb-4 rounded shadow-sm">
+                <div class="fs-5">
+                    <p class="mb-2">
+                        <strong style="color:#EC008C; font-size: 1.5rem;">R699</strong>
+                        <span class="fw-normal">Once-off for the router & installation.</span>
+                        <small class="text-muted d-block">(Your first month is on us!)</small>
+                    </p>
+                    <hr class="my-2">
+                    <p class="mb-0">
+                        <strong style="color:#EC008C; font-size: 1.5rem;">R399</strong>
+                        <span class="fw-normal">Per month. That's it.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Urgency Message - Refined Style -->
+            <div class="alert alert-warning d-flex align-items-center p-3 mb-4 rounded-3 shadow-sm animate__animated animate__pulse animate__infinite" role="alert" style="background-color: #ffe0eb; border-color: #EC008C; animation-duration: 2s;">
+                <i class="bi bi-fire me-3" style="color: #EC008C; font-size: 1.8rem;"></i>
+                <div style="color: #c40073; font-weight: 700; font-size: 1.15rem;">
+                    ⚡ Special introductory offer! Order yours while stocks last!
+                </div>
+            </div>
+            <!-- End Urgency Message -->
+
+            <!-- Action Buttons -->
+            <div class="d-flex align-items-center gap-3">
+              <button
+                class="btn btn-primary d-flex align-items-center gap-2 shadow-sm px-4 py-2"
+                type="button"
+                id="applyBtn"
+              >
+                <i class="bi bi-rocket-takeoff-fill"></i>
+                Apply Now
+              </button>
+              <a href="#benefits" class="fw-semibold text-decoration-none">Learn More</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5 bg-white">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mb-5 fw-bold">Everything You Need, Nothing You Don't.</h2>
+            <div class="row gx-4 gx-lg-5 text-center">
+                <div class="col-md-4 mb-5">
+                    <div class="benefit-icon mb-3"><i class="bi bi-film"></i></div>
+                    <h4 class="fw-semibold">Stream Without Limits</h4>
+                    <p class="text-muted">Enjoy smooth, buffer-free streaming on Netflix, YouTube, and more, even in HD. Perfect for movie nights!</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="benefit-icon mb-3"><i class="bi bi-people-fill"></i></div>
+                    <h4 class="fw-semibold">Connect the Whole Family</h4>
+                    <p class="text-muted">Our 20Mbps speed is optimized for multiple devices. Everyone can browse, study, and game at the same time.</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="benefit-icon mb-3"><i class="bi bi-wallet2"></i></div>
+                    <h4 class="fw-semibold">Simple, Honest Pricing</h4>
+                    <p class="text-muted">No confusing bundles or hidden costs. Just one flat monthly fee for unlimited internet. You're in control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item mb-3 rounded shadow-sm">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What is the Umoja Homespot?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            The Umoja Homespot is a 5G-enabled router that provides high-speed, unlimited home internet. It uses advanced wireless technology to deliver a reliable and fast connection without the need for traditional fibre or ADSL lines.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item mb-3 rounded shadow-sm">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How fast is "20Mbps 5G Unlimited"?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Our 20Mbps plan offers a consistent speed of 20 megabits per second. This is ideal for most households, allowing for smooth HD streaming on multiple devices, online gaming, video calls, and general browsing without buffering or slowdowns.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item mb-3 rounded shadow-sm">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Is there a contract or data cap?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            No long-term contracts! Our service is month-to-month, giving you flexibility. And yes, it's truly unlimited data – stream, download, and browse as much as you want without worrying about data caps or extra charges.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- You can add more FAQ items here following the same structure -->
+                <div class="accordion-item mb-3 rounded shadow-sm">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What happens during a power outage?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            The Umoja Homespot router includes a built-in backup battery. This means your internet connection can remain active for several hours during a power outage, keeping you connected when you need it most.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-3 rounded shadow-sm">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            How do I check for coverage in my area?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            To check if Umoja Homespot 5G is available in your area, please click on the "Apply Now" button. You'll be directed to a page where you can enter your location details to confirm coverage.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="social-section" class="social-section">
+      <div class="container px-4 px-lg-5">
+        <h3 class="mb-4 fw-bold">Connect With Us!</h3>
+        <ul class="social-icons justify-content-center">
+          <li>
+            <a href="https://wa.me/27732125406?text=/project-700" target="_blank" aria-label="Chat with us on WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+              <span>WhatsApp: 073 212 5406</span>
+            </a>
+          </li>
+
+          <!-- Add other social media icons if needed -->
+          <!-- <li>
+            <a href="#" target="_blank" aria-label="Follow us on Facebook">
+              <i class="bi bi-facebook"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" aria-label="Follow us on Instagram">
+              <i class="bi bi-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          &copy; Umoja 2025. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+      const applyBtn = document.getElementById("applyBtn");
+      applyBtn.addEventListener("click", function () {
+        // You can link to a more specific application or coverage check page
+        window.location.href = "signal_zone.html";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Sign up for Umoja's Unlimited 5G Homespot Internet with no data caps, no hidden fees."
+    />
+    <meta name="author" content="Umoja" />
+    <title>Umoja</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://portal.umoja.network/custom_icons/1b42d87b8a41687683505729c1d20873/apple-icon-57x57.png" />
+
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Theme Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+
+      .navbar {
+        padding: 1rem 0;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #EC008C, #c40073);
+        border: none;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .signup-container {
+        max-width: 960px;
+        margin: 100px auto 50px auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        font-weight: 700;
+        color: #EC008C;
+        margin-bottom: 1.5rem;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 1100px;
+        border-radius: 12px;
+      }
+
+      footer {
+        margin-top: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container px-4 px-lg-5">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/logo.avif"
+            alt="Umoja Logo"
+            width="150"
+            height="40"
+            class="me-2"
+          />
+        </a>
+
+        <!-- Navbar toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-semibold"
+                aria-current="page"
+                href="signup.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="signup-container">
+      <h2 class="text-center">
+        <i class="bi bi-rocket-takeoff-fill me-2"></i> Get Connected with Umoja
+      </h2>
+      <p class="text-center text-muted mb-4">
+        Fill in the form below to sign up for our unlimited 5G Homespot Internet.
+      </p>
+
+      <!-- Splynx Sign Up Widget Script -->
+<script type="text/javascript">
+  (function(){
+    var js=document.getElementById("splynx_signup_script");
+    if(!js){
+      js=document.createElement("script");
+      js.id="splynx_signup_script";
+      js.src="https://portal.umoja.network/js/development/widgets/signup.js";
+      document.body.appendChild(js);
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    let address = searchParams.get('address') || '';
+    var p={
+      "formTitle":"Customer Acquisition",
+      "formButtonText":"Sign Up",
+      "submitThanks":"Thanks for signing up!",
+      "required_tariff":1,
+      "vat_included":0,
+      "partner_id":"4",
+      "admin_id":"5",
+      "crm_status":"1",
+      "location":"3",
+      "show_form_terms":1,
+      "form_terms_template":"100",
+      "required_first_name":1,
+      "required_last_name":1,
+      "required_id_number":1,
+      "required_email":1,
+      "required_phone":1,
+      "required_whatsapp":1,
+      "required_street":1,
+      "required_city":1,
+      "required_zip":1,
+      "url":"https://portal.umoja.network",
+      "scriptUrl":"https://portal.umoja.network/js/development/widgets/signup.js"
+    };
+    if(typeof SplynxSignUpWidget==="undefined"){
+      js.addEventListener("load", function(){
+        SplynxSignUpWidget.init(p);
+      });
+    } else {
+      SplynxSignUpWidget.init(p);
+    }
+
+    console.log(address.toString());
+    if(address){
+      setTimeout(function(){
+        const addrField = document.querySelector(
+          'input[name="Leads[street]"], input[name="Leads[street_1]"], input[name="street"]'
+        );
+        if(addrField){
+          addrField.value = decodeURIComponent(address);
+          addrField.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      }, 2000);
+    }
+  })();
+</script>
+
+
+      <!-- Fallback iframe with query params -->
+      <iframe
+        data-widget-type="embedded"
+        src="https://portal.umoja.network/admin/crm/sign-up?partner_id=4&admin_id=5&location=3&formTitle=Customer%20Acquisition&formButtonText=Sign%20Up&submitThanks=Thanks%20for%20signing%20up!&required_first_name=1&required_last_name=1&required_id_number=1&required_email=1&required_phone=1&required_whatsapp=1&required_street=1&required_city=1&required_zip=1&required_tariff=1&vat_included=0&show_form_terms=1&form_terms_template=100">
+      </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          &copy; Umoja 2025. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
