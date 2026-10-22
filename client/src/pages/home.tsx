@@ -90,7 +90,7 @@ export default function Home() {
               "name": "Which Umoja 5G speed should I choose?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Choose 20Mbps for everyday browsing, HD streaming and working from home; 30Mbps for families using 4-6 devices, 4K video and gaming; or 50Mbps for bandwidth-heavy homes, multiple 4K streams and home offices."
+                "text": "Choose 20Mbps for everyday browsing, HD streaming and working from home; 30Mbps for busy households, 4K video and gaming; or 50Mbps for bandwidth-heavy homes, multiple 4K streams and home offices."
               }
             },
             {

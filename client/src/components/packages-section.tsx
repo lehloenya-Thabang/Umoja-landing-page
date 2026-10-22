@@ -16,7 +16,7 @@ const plans = [
     label: "Family choice",
     speed: "30Mbps",
     price: "499",
-    description: "Optimised for 4–6 devices, uninterrupted 4K video and low-ping gaming.",
+    description: "Optimised for busy households, uninterrupted 4K video and low-ping gaming.",
     features: [
       "100% uncapped with low latency",
       "Upgraded 5G super router",
