@@ -1,5 +1,5 @@
 {
-  "include": ["client/src/**/*", "vite.config.ts", "tailwind.config.ts"],
+  "files": ["client/src/main.tsx", "vite.config.ts", "tailwind.config.ts"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,

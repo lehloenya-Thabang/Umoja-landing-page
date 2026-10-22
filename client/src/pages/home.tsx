@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/hero-section";
 import BenefitsSection from "@/components/benefits-section";
+import PackagesSection from "@/components/packages-section";
 import FAQSection from "@/components/faq-section";
 import OfficesSection from "@/components/offices-section";
 import { useReferralTracking } from "@/hooks/use-referral";
@@ -14,24 +15,26 @@ export default function Home() {
   return (
     <div id="home" className="pt-16">
       <Helmet>
-        <title>Umoja 5G Home Internet | Affordable Uncapped Internet in South Africa</title>
-        <meta name="description" content="Get uncapped 5G home internet from R399/month. Umoja delivers 20Mbps unlimited internet to South African families — no hidden fees, load-shedding ready. Check your coverage today." />
+        <title>Umoja 5G Home Internet | Uncapped Plans from R399</title>
+        <meta name="description" content="Get uncapped 5G home internet from R399/month. Choose 20Mbps, 30Mbps or 50Mbps for your South African home — no surprise usage fees." />
         <link rel="canonical" href="https://promo.umoja.network/" />
-        <meta property="og:title" content="Umoja 5G Home Internet | Affordable Uncapped Internet in South Africa" />
-        <meta property="og:description" content="Get uncapped 5G home internet from R399/month. Umoja delivers 20Mbps unlimited internet to South African families — no hidden fees, load-shedding ready. Check your coverage today." />
+        <meta property="og:title" content="Umoja 5G Home Internet | Uncapped Plans from R399" />
+        <meta property="og:description" content="Choose uncapped 20Mbps, 30Mbps or 50Mbps 5G home internet with simple monthly pricing and no surprise usage fees." />
         <meta property="og:url" content="https://promo.umoja.network/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://promo.umoja.network/assets/og-image.png" />
+        <meta property="og:image" content="https://promo.umoja.network/assets/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Umoja 5G Home Internet | Affordable Uncapped Internet in South Africa" />
-        <meta name="twitter:description" content="Get uncapped 5G home internet from R399/month. Umoja delivers 20Mbps unlimited internet to South African families — no hidden fees, load-shedding ready. Check your coverage today." />
-        <meta name="twitter:image" content="https://promo.umoja.network/assets/og-image.png" />
+        <meta name="twitter:title" content="Umoja 5G Home Internet | Uncapped Plans from R399" />
+        <meta name="twitter:description" content="Choose uncapped 20Mbps, 30Mbps or 50Mbps 5G home internet with simple monthly pricing and no surprise usage fees." />
+        <meta name="twitter:image" content="https://promo.umoja.network/assets/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Umoja",
           "url": "https://promo.umoja.network/",
-          "logo": "https://promo.umoja.network/assets/og-image.png",
+          "logo": "https://promo.umoja.network/assets/logo.avif",
           "telephone": "+27108805324",
           "email": "info@umoja.network",
           "address": {
@@ -79,15 +82,15 @@ export default function Home() {
               "name": "How does the payment work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "It's simple! You pay R399 every month for unlimited internet - no usage charges or pay-as-you-go fees. The router is free to use (included with your subscription) and there's just a one-time R699 setup fee for installation and activation. After payment, delivery takes 3-5 working days."
+                "text": "Plans start at R399 per month for uncapped internet, with no usage charges or pay-as-you-go fees. The router is free to use, the once-off activation fee is R300, and your first month is included. After payment, delivery takes 3-5 working days."
               }
             },
             {
               "@type": "Question",
-              "name": "How fast is \"20Mbps 5G Uncapped\"?",
+              "name": "Which Umoja 5G speed should I choose?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our 20Mbps speed is perfect for families. You can stream HD videos, video call, browse social media, and work from home simultaneously. It's fast enough for 4-6 devices to be connected at once without slowdowns."
+                "text": "Choose 20Mbps for everyday browsing, HD streaming and working from home; 30Mbps for families using 4-6 devices, 4K video and gaming; or 50Mbps for bandwidth-heavy homes, multiple 4K streams and home offices."
               }
             },
             {
@@ -95,7 +98,15 @@ export default function Home() {
               "name": "Is there really no data limit?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, you get Uncapped data with generous usage allowances! While there will be a fair usage policy to ensure network quality for all users, you can stream, download, and browse freely for typical home internet usage without worrying about running out of data."
+                "text": "Yes. All Umoja plans are uncapped, so your connection is not disconnected when you reach a usage threshold. Our Fair Use Policy may reduce your speed to 5Mbps for the remainder of the billing period after you use 300GB on the R399 plan, 500GB on the R499 plan, or 800GB on the R549 plan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the Fair Use Policy work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The R399 plan has a 300GB fair-use threshold, the R499 plan has a 500GB threshold, and the R549 plan has an 800GB threshold. If you reach your plan's threshold during a billing period, your connection speed is reduced to 5Mbps for the remainder of that billing period. Your service remains uncapped and is not disconnected."
               }
             },
             {
@@ -119,6 +130,7 @@ export default function Home() {
       </Helmet>
       <HeroSection />
       <BenefitsSection />
+      <PackagesSection />
       <FAQSection />
       <OfficesSection />
     </div>

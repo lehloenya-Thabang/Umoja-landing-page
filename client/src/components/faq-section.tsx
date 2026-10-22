@@ -13,16 +13,20 @@ export default function FAQSection() {
     },
     {
       question: "How does the payment work?",
-      answer: "It's simple! You pay R399 every month for unlimited internet - no usage charges or pay-as-you-go fees. The router is free to use (included with your subscription) and there's just a one-time R699 setup fee for installation and activation. After payment, delivery takes 3-5 working days."
+      answer: "Plans start at R399 per month for uncapped internet, with no usage charges or pay-as-you-go fees. The router is free to use, the once-off activation fee is R300, and your first month is included. After payment, delivery takes 3-5 working days."
     },
     {
-      question: "How fast is \"20Mbps 5G Uncapped\"?",
-      answer: "Our 20Mbps speed is perfect for families. You can stream HD videos, video call, browse social media, and work from home simultaneously. It's fast enough for 4-6 devices to be connected at once without slowdowns."
+      question: "Which Umoja 5G speed should I choose?",
+      answer: "Choose 20Mbps for everyday browsing, HD streaming and working from home; 30Mbps for families using 4-6 devices, 4K video and gaming; or 50Mbps for bandwidth-heavy homes, multiple 4K streams and home offices."
     },
    
     {
       question: "Is there really no data limit?",
-      answer: "Yes, you get Uncapped data with generous usage allowances! While there will be a fair usage policy to ensure network quality for all users, you can stream, download, and browse freely for typical home internet usage without worrying about running out of data."
+      answer: "Yes. All Umoja plans are uncapped, so your connection is not disconnected when you reach a usage threshold. Our Fair Use Policy may reduce your speed to 5Mbps for the remainder of the billing period after you use 300GB on the R399 plan, 500GB on the R499 plan, or 800GB on the R549 plan."
+    },
+    {
+      question: "How does the Fair Use Policy work?",
+      answer: "The R399 plan has a 300GB fair-use threshold, the R499 plan has a 500GB threshold, and the R549 plan has an 800GB threshold. If you reach your plan's threshold during a billing period, your connection speed is reduced to 5Mbps for the remainder of that billing period. Your service remains uncapped and is not disconnected."
     },
     {
       question: "Does the router work during load shedding?",
@@ -43,7 +47,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-background">
+    <section id="faq" className="py-20 bg-background scroll-mt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6" data-testid="faq-title">Frequently Asked Questions</h2>
@@ -58,6 +62,9 @@ export default function FAQSection() {
               <button 
                 className="w-full px-6 py-4 text-left flex justify-between items-center font-semibold hover:bg-accent/50 transition-colors duration-200 rounded-t-lg"
                 onClick={() => toggleItem(index)}
+                aria-expanded={openItems.includes(index)}
+                aria-controls={`faq-answer-${index}`}
+                id={`faq-question-${index}`}
                 data-testid={`faq-button-${index}`}
               >
                 <span data-testid={`faq-question-${index}`}>{item.question}</span>
@@ -65,11 +72,17 @@ export default function FAQSection() {
                   className={cn(
                     "w-5 h-5 transition-transform duration-200",
                     openItems.includes(index) ? "rotate-180" : ""
-                  )} 
+                  )}
+                  aria-hidden="true"
                 />
               </button>
               {openItems.includes(index) && (
-                <CardContent className="px-6 pb-4">
+                <CardContent
+                  className="px-6 pb-4"
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                >
                   <div className="text-muted-foreground leading-relaxed" data-testid={`faq-answer-${index}`}>
                     {item.answer}
                   </div>

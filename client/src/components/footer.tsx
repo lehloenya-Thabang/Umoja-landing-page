@@ -15,7 +15,11 @@ export default function Footer() {
           <div className="space-y-4">
             <img 
               src="/assets/logo.avif" 
-              alt="Umoja Logo" 
+              alt="Umoja"
+              width="240"
+              height="64"
+              loading="lazy"
+              decoding="async"
               className="h-8 w-auto"
             />
             <p className="text-muted-foreground">
@@ -24,19 +28,20 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-6">Quick Links</h4>
+            <h3 className="font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors duration-200" data-testid="footer-link-home">Home</a></li>
+              <li><a href="#packages" className="text-muted-foreground hover:text-primary transition-colors duration-200">Packages</a></li>
               <li><a href="https://portal.umoja.network/sign-up/2c4c2135bf4eca29" className="text-muted-foreground hover:text-primary transition-colors duration-200" data-testid="footer-link-application">Apply Now</a></li>
             </ul>
           </div>
           
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-6">Contact Us</h4>
+            <h3 className="font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-primary" />
+                <Phone className="w-4 h-4 text-primary" aria-hidden="true" />
                 <a 
                   href="tel:+27108805324"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200" 
@@ -46,7 +51,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <SiWhatsapp className="w-4 h-4 text-primary" />
+                <SiWhatsapp className="w-4 h-4 text-primary" aria-hidden="true" />
                 <a 
                   href="https://wa.me/27732125406" 
                   target="_blank" 
@@ -58,11 +63,11 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground" data-testid="contact-email">info@umoja.network</span>
+                <Mail className="w-4 h-4 text-primary" aria-hidden="true" />
+                <a href="mailto:info@umoja.network" className="text-muted-foreground hover:text-primary transition-colors duration-200" data-testid="contact-email">info@umoja.network</a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-primary mt-1" />
+                <MapPin className="w-4 h-4 text-primary mt-1" aria-hidden="true" />
                 <span className="text-muted-foreground" data-testid="contact-address">159 Beyers Naude Drive, Johannesburg</span>
               </li>
             </ul>
@@ -73,15 +78,15 @@ export default function Footer() {
         <div className="border-t border-border pt-8 mb-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
               <span>Secure &amp; encrypted payments</span>
             </div>
             <div className="flex items-center gap-4 flex-wrap justify-center">
-              <img src={payfastLogo} alt="PayFast" className="h-7 w-auto object-contain" />
-              <img src={visaLogo} alt="Visa" className="h-7 w-auto object-contain" />
-              <img src={mastercardLogo} alt="Mastercard" className="h-7 w-auto object-contain" />
-              <img src={verifiedByVisa} alt="Verified by Visa" className="h-7 w-auto object-contain" />
-              <img src={mastercardSecure} alt="Mastercard SecureCode" className="h-7 w-auto object-contain" />
+              <img src={payfastLogo} alt="PayFast" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
+              <img src={visaLogo} alt="Visa" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
+              <img src={mastercardLogo} alt="Mastercard" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
+              <img src={verifiedByVisa} alt="Verified by Visa" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
+              <img src={mastercardSecure} alt="Mastercard SecureCode" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -90,8 +95,16 @@ export default function Footer() {
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground">
             © 2026 Umoja. All rights reserved. | 
-            <a href="#" className="hover:text-primary transition-colors duration-200 ml-1" data-testid="footer-privacy">Privacy Policy</a> | 
-            <a href="/assets/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-200 ml-1" data-testid="footer-terms">Terms and Conditions</a>
+            <a href="/privacy-policy.html" className="footer-legal-link ml-1" data-testid="footer-privacy">Privacy Policy</a> |
+            <a href="/assets/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer" className="footer-legal-link ml-1" data-testid="footer-terms">Terms and Conditions</a>
+            <span aria-hidden="true"> | </span>
+            <button
+              type="button"
+              className="footer-legal-link ml-1"
+              onClick={() => window.dispatchEvent(new Event("umoja:cookie-settings"))}
+            >
+              Cookie settings
+            </button>
           </p>
         </div>
       </div>
