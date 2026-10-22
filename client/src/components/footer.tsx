@@ -1,10 +1,5 @@
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import payfastLogo from "@assets/Payfast_logo_1772788891947.png";
-import verifiedByVisa from "@assets/PayGate-3D-Secure-Logo-Verified-by-Visa_1772789042628.png";
-import visaLogo from "@assets/Visa_1772789115829.png";
-import mastercardLogo from "@assets/Master_Card_1772789214152.png";
-import mastercardSecure from "@assets/PayGate-3D-Secure-Logo-MasterCard-SecureCode_1772789252362.png";
 
 export default function Footer() {
   return (
@@ -74,23 +69,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Secure Payment Strip */}
-        <div className="border-t border-border pt-8 mb-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
-              <span>Secure &amp; encrypted payments</span>
-            </div>
-            <div className="flex items-center gap-4 flex-wrap justify-center">
-              <img src={payfastLogo} alt="PayFast" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
-              <img src={visaLogo} alt="Visa" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
-              <img src={mastercardLogo} alt="Mastercard" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
-              <img src={verifiedByVisa} alt="Verified by Visa" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
-              <img src={mastercardSecure} alt="Mastercard SecureCode" className="h-7 w-auto object-contain" loading="lazy" decoding="async" />
-            </div>
-          </div>
-        </div>
-        
         {/* Copyright */}
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground">
